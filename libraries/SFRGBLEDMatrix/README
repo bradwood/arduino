@@ -1,0 +1,1 @@
+This is an Arduino interface library for interfacing with an alternative firmware https://github.com/fornellas/RGB_Backpack_4096_Colors for Sparkfun's serial interface RGB LED Matrix (http://www.sparkfun.com/products/760).

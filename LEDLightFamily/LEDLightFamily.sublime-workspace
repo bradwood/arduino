@@ -1,0 +1,1110 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mids",
+				"mids_g"
+			],
+			[
+				"chid",
+				"child_id"
+			],
+			[
+				"treb",
+				"treb_b"
+			],
+			[
+				"bass",
+				"bass_g"
+			],
+			[
+				"r",
+				"r"
+			],
+			[
+				"STA",
+				"STATE_SLEEP"
+			],
+			[
+				"LPF_RC_",
+				"LPF_RC_RGB"
+			],
+			[
+				"df",
+				"scrollDisplayLeft"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/brad/Documents/arduino/Libraries/LEDLightFamilyHelper/LEDLightFamilyHelper.cpp",
+			"settings":
+			{
+				"buffer_size": 17703,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Child/Child.ino",
+			"settings":
+			{
+				"buffer_size": 14898,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Parent/Parent.ino",
+			"settings":
+			{
+				"buffer_size": 20271,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/brad/Documents/arduino/Libraries/LEDLightFamilyHelper/LEDLightFamilyHelper.h",
+			"settings":
+			{
+				"buffer_size": 4246,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/brad/Documents/arduino/Libraries/Accelerometer/Accelerometer.cpp",
+			"settings":
+			{
+				"buffer_size": 9506,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"brac",
+				"BracketHighlighter: Wrap Selections with Brackets"
+			],
+			[
+				"ori clo righ",
+				"Origami: Clone File to Pane on the Right"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"INSTAL",
+				"Package Control: Install Package"
+			],
+			[
+				"SELE	",
+				"BracketHighlighter: Select Bracket Content"
+			],
+			[
+				"bre",
+				"BracketHighlighter: Select Bracket Content"
+			],
+			[
+				"select brac",
+				"BracketHighlighter: Select Bracket Content"
+			],
+			[
+				"brack",
+				"BracketHighlighter: Select Bracket Content"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"doc",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta ",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"copy",
+				"File: Copy Path"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Add Repository"
+			],
+			[
+				"pak",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Add Channel"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"upl",
+				"Stino: Upload"
+			],
+			[
+				"comp",
+				"Stino: Verify / Compile"
+			],
+			[
+				"uplo",
+				"Stino: Upload"
+			],
+			[
+				"compi",
+				"Stino: Verify / Compile"
+			],
+			[
+				"mon",
+				"Stino: Serial Monitor-Start"
+			],
+			[
+				"up",
+				"Stino: Upload"
+			],
+			[
+				"u",
+				"Stino: Upload"
+			],
+			[
+				"stin uplo",
+				"Stino: Upload"
+			],
+			[
+				"com",
+				"Stino: Toggle Full Compilation OFF"
+			],
+			[
+				"ser sta",
+				"Stino: Serial Monitor-Start"
+			],
+			[
+				"serial",
+				"Stino: Select Serial Port"
+			],
+			[
+				"seri",
+				"Stino: Serial Monitor-Start"
+			],
+			[
+				"seria",
+				"Stino: Serial Monitor-Start"
+			],
+			[
+				"stin",
+				"Stino: Serial Monitor-Start"
+			],
+			[
+				"sti up",
+				"Stino: Upload"
+			],
+			[
+				"sti sele po",
+				"Stino: Select Serial Port"
+			],
+			[
+				"COmp",
+				"Stino: Verify / Compile"
+			],
+			[
+				"stino ser",
+				"Stino: Serial Monitor-Start"
+			],
+			[
+				"stin sel avr",
+				"Stino: Select Arduino AVR Board"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": true,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/private/tmp/junkchild.txt",
+		"/Users/brad/Library/Application Support/Sublime Text 2/Packages/User/arduino-debug.sublime-snippet",
+		"/Users/brad/Documents/arduino/LEDLightFamily/Parent/Parent.ino",
+		"/Users/brad/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/Users/brad/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/brad/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/brad/Library/Application Support/Sublime Text 2/Packages/ActionScript/ActionScript.tmLanguage"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"HP_FILTER_CUTOFF_REG",
+			"0x0F",
+			"PULSE_LP",
+			"calib",
+			"init",
+			"taphan",
+			"buf[6",
+			"SmoothRGB",
+			"buf[3]",
+			"g_treb",
+			"mids",
+			"txacc",
+			"buf",
+			"tx_wa",
+			"Fast",
+			"process",
+			"buf[3]",
+			"LPFON_MASK",
+			"CMD_MODE",
+			"CMD_LP",
+			"buf",
+			"LPF_RC",
+			" \n",
+			"LPF_RC",
+			"LPF_RC_Acc",
+			"LPF_RC",
+			"*/\n",
+			"LPF_RC",
+			"ProcessCommand",
+			"SmoothRGB",
+			"LPF_RC",
+			"RXAccel",
+			"~CMD_LPFON_MASK",
+			"CMD_LPFON_MASK",
+			"~CMD_LPFON_MASK",
+			"CMD_LPFON_MASK",
+			"\n					",
+			"CMD_LPFON_MASK",
+			"to",
+			"digitalWrite",
+			"g_green",
+			"debug",
+			"const",
+			"extern",
+			"AUD",
+			"STATE_WAKE",
+			"TXAC",
+			"TX",
+			"Find",
+			"Control",
+			"Option",
+			"Shift",
+			"Control",
+			"Option",
+			"option",
+			"Control",
+			"Serial",
+			"readRegisters",
+			"{\n",
+			"byte",
+			"DEBUG"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/brad/Documents/arduino/Libraries/LEDLightFamilyHelper/LEDLightFamilyHelper.cpp",
+					"settings":
+					{
+						"buffer_size": 17703,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10338,
+								10376
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5436.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Child/Child.ino",
+					"settings":
+					{
+						"buffer_size": 14898,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7997,
+								8002
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Arduino-like IDE/Arduino.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1893.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Parent/Parent.ino",
+					"settings":
+					{
+						"buffer_size": 20271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15411,
+								15427
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Arduino-like IDE/Arduino.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6104.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/brad/Documents/arduino/Libraries/LEDLightFamilyHelper/LEDLightFamilyHelper.h",
+					"settings":
+					{
+						"buffer_size": 4246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2107,
+								2123
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 653.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/brad/Documents/arduino/Libraries/Accelerometer/Accelerometer.cpp",
+					"settings":
+					{
+						"buffer_size": 9506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								736,
+								736
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 181.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "Parent/Parent.ino",
+					"settings":
+					{
+						"buffer_size": 20271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20102,
+								20102
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Arduino-like IDE/Arduino.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 8393.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Child/Child.ino",
+					"settings":
+					{
+						"buffer_size": 14898,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2480,
+								2480
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Arduino-like IDE/Arduino.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 604.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.505501181526,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Compilation_Child_174963":
+	{
+		"height": 402.0
+	},
+	"output.Compilation_Child_290383":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Child_371097":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Child_521988":
+	{
+		"height": 100.0
+	},
+	"output.Compilation_Child_543829":
+	{
+		"height": 329.0
+	},
+	"output.Compilation_Child_571315":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Child_630174":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Child_834914":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Child_956553":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_115618":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_11736":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_173166":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_364957":
+	{
+		"height": 503.0
+	},
+	"output.Compilation_Parent_415294":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_436282":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_445699":
+	{
+		"height": 544.0
+	},
+	"output.Compilation_Parent_507628":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_574773":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_579899":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_671507":
+	{
+		"height": 576.0
+	},
+	"output.Compilation_Parent_688281":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_771864":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_772781":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_795971":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_819951":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_853321":
+	{
+		"height": 347.0
+	},
+	"output.Compilation_Parent_859063":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_933077":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_989931":
+	{
+		"height": 88.0
+	},
+	"output.Compilation_Parent_994929":
+	{
+		"height": 88.0
+	},
+	"output.exec":
+	{
+		"height": 88.0
+	},
+	"output.stino_log":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"ledlight",
+				"Libraries/LEDLightFamilyHelper/LEDLightFamilyHelper.h"
+			],
+			[
+				"famil",
+				"Libraries/LEDLightFamilyHelper/LEDLightFamilyHelper.cpp"
+			],
+			[
+				"chi",
+				"LEDLightFamily/Child/Child.ino"
+			],
+			[
+				"help",
+				"Libraries/LEDLightFamilyHelper/LEDLightFamilyHelper.cpp"
+			],
+			[
+				"par",
+				"LEDLightFamily/Parent/Parent.ino"
+			],
+			[
+				"thi",
+				"this is a test"
+			],
+			[
+				"ch",
+				"Child/Child.ino"
+			],
+			[
+				"",
+				"/Users/brad/Documents/arduino/LEDLightFamily/Parent/Parent.ino"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 151.0,
+	"status_bar_visible": true
+}
