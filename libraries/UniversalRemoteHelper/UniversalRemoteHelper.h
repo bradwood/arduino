@@ -30,4 +30,10 @@ typedef struct {
 } ir_transmission_t;
 
 
+//format {{PROTOCOL},{"devname"},{"buttname"}, data, nbits,len, buf[],hz,addr,repeat}
+ir_transmission_t cmdOnOff[1] = { 
+  { SONY, TV, 0xA90, 12, 0, {0}, 0, 0, 0 } 
+};
+
+
 #endif
