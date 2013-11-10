@@ -45,14 +45,117 @@ void setup()
 
 }
 
+//////////////////////////////////
+//// Loop Variables  /////////////
+//////////////////////////////////
+unsigned int keyData;  // The raw data from the key press register
+unsigned int previousKeyData = 0;  // previously read raw data
+byte activeRow;  // The row of the button being pressed
+byte activeColumn;  // The column of the button being pressed
+// These variables are used to emulate a key-hold. While the key
+//  is held down, there's a long delay before the second character
+//  is printed. Then a shorter delay between the remaining key presses
+unsigned int holdCount = 0;
+// This behavior is highly dependent on scanTime and debounceConfig
+//  which are set in the setup.
+const byte holdCountMax = 25;
 
+// These releaseCount variables 
+//  The keypad engin on the SX1509 doesn't generate an interrupt
+//  when a key is relased. So we'll use this counter to generate
+//  releases.
+unsigned int releaseCount = 0;  // Our counter
+unsigned int releaseCountMax = 100;  // Top, in about milliseconds
 
+// The loop will poll the interrupt pin. If the pin
+//  is pulled low by the SX1509, we'll read the keypad data and
+//  sort it into row and column, and send the corresponding key
+//  press out to the computer.
 
-void loop() {
+void loop()
+{
+	// The interrupt is active low, and pulled-up otherwise.
+	// The interrupt will be activated whenever a key press is read
+	if (!digitalRead(sx1509interruptPin))
+	{
+		// readKeyData() returns a 16-bit word of data. The lower 8-bits 
+		//  represent each of the up-to 8 rows. The upper 8-bits
+		//  correspond to the columns. A 1 in a bit position means
+		//  that a button in that row or column is being pressed.
+		keyData = sx1509.readKeyData();
+
+		// Next, we'll sort out which row and column are being pressed.
+		activeRow = keyData & 0xFF;  // The row is the lower 8-bits
+		activeColumn = keyData >> 8;  // column is the upper 8-bits
+		// The getBitPosition function will return which bit is our 1
+		activeRow = getBitPosition(activeRow);
+		activeColumn = getBitPosition(activeColumn);
+
+		// If it's a new button press spit it out, reset hold delay
+		if (keyData != previousKeyData)
+		{
+			holdCount = 0;
+			// Keyboard.write is a Leonardo-specific Arduino function.
+			//  It'll perform a key press and release just like any
+			//  keyboard connected to your computer. For testing, this
+			//  could easily be replaced by
+			Serial.print(activeRow);
+			Serial.print(" ");
+			Serial.println(activeColumn);
+		}
+		else
+		{
+			holdCount++;  // Increment holdCount
+			// This works as something of a key-press delay. Hold
+			//  down a key on your computer to see what I'm talking
+			//  about. After the initial delay, all characters following
+			//  will stream out quickly.
+			if (holdCount > holdCountMax)
+			{
+				Serial.print(activeRow);
+				Serial.print(" ");
+				Serial.println(activeColumn);
+			}
+		}
+		// Reset release count since there's been a key-press
+		releaseCount = 0;
+		// Set keyData as previousKeyData
+		previousKeyData = keyData;
+	}
+
+	// If no keys have been pressed we'll continuously increment
+	//  releaseCount. Eventually creating a release, once the count
+	//  hits the max.
+	
+	releaseCount++;
+	if (releaseCount == releaseCountMax)
+	{
+		releaseCount = 0;
+		previousKeyData = 0;
+	}
+	delay(1);  // This gives releaseCountMax a more intuitive unit
+
+	/* original IR transmission loop -- remember SONY requires 3 sends...
 	if (Serial.read() != -1) {
 		for (int i = 0; i < 3; i++) {
 			irsend.sendSony(keyMap[0][0][0].data,keyMap[0][0][0].nbits );
 			delay(40);
 		}
 	}
+	*/
+}  // end loop
+
+// This function scours a byte and returns the position of the 
+//  first byte it sees a 1. Great if our data bytes only have
+//  a single 1 in them! Should return 0-7 if it sees a 1, 255 otherwise
+byte getBitPosition(byte dataByte)
+{
+	for (int i=0; i<8; i++)
+	{
+		if (dataByte & (1<<i))
+		{
+			return i;
+		}
+	}
+	return 255;  // Otherwise return an error
 }
