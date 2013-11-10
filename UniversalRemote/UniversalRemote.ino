@@ -95,13 +95,12 @@ void loop()
 		if (keyData != previousKeyData)
 		{
 			holdCount = 0;
-			// Keyboard.write is a Leonardo-specific Arduino function.
-			//  It'll perform a key press and release just like any
-			//  keyboard connected to your computer. For testing, this
-			//  could easily be replaced by
+
 			Serial.print(activeRow);
 			Serial.print(" ");
 			Serial.println(activeColumn);
+			executeCommand(activeRow,activeColumn);
+
 		}
 		else
 		{
@@ -115,6 +114,7 @@ void loop()
 				Serial.print(activeRow);
 				Serial.print(" ");
 				Serial.println(activeColumn);
+				executeCommand(activeRow,activeColumn);
 			}
 		}
 		// Reset release count since there's been a key-press
@@ -158,4 +158,52 @@ byte getBitPosition(byte dataByte)
 		}
 	}
 	return 255;  // Otherwise return an error
+}
+
+
+
+void executeCommand(int row,int col) //executes the command array corresponding the the command at row and col in the keyMap
+{
+	unsigned int arraySize = sizeof( *keyMap[row][col] ) / sizeof( keyMap[row][col][0] ); //get no of items in array of cmds
+	
+	Serial.print("No of items in array ");
+	Serial.println(arraySize);
+	
+	Serial.print("Size of cmd array");
+	Serial.println(sizeof( *keyMap[row][col] ));
+
+	Serial.print("Size of 1st item in cmd array");
+	Serial.println(sizeof( keyMap[row][col][0] ));
+
+	Serial.print("1st item in cmd array devname");
+	Serial.println(keyMap[row][col][2].dev_name );
+	Serial.print("2nd item in cmd array devname");
+	Serial.println(keyMap[row][col][3].dev_name );
+
+
+	switch (row)
+	{
+	case 'a':    
+		//digitalWrite(2, HIGH);
+	break;
+	case 'b':    
+		//digitalWrite(3, HIGH);
+	break;
+
+	case 'c':    
+		//digitalWrite(4, HIGH);
+	break;
+
+	case 'd':    
+		//digitalWrite(5, HIGH);
+	break;
+
+	case 'e':    
+		//digitalWrite(6, HIGH);
+	break;
+    
+	//default:
+	// turn all the LEDs off:
+	} //end switch  
+
 }
