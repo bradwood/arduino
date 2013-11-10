@@ -31,9 +31,24 @@ typedef struct {
 
 
 //format {{PROTOCOL},{"devname"},{"buttname"}, data, nbits,len, buf[],hz,addr,repeat}
-ir_transmission_t cmdOnOff[1] = { 
-  { SONY, TV, 0xA90, 12, 0, {0}, 0, 0, 0 } 
+ir_transmission_t cmdOnOff[2] = { 
+  { SONY, TV, 0xA90, 12, 0, {0}, 0, 0, 0 }, //telly on/off
+  { SONY, TV, 0xA90, 12, 0, {0}, 0, 0, 0 }  //AVR on/off
 };
 
+ir_transmission_t nop[1] = {
+  { SONY, TV, 0x0, 0, 0, {0}, 0, 0, 0 } // do nothing TODO: check this. 
+};
+
+//dimensions of keypad
+const byte numRows = 4;
+const byte numCols = 5;
+
+ir_transmission_t *keyMap[numRows][numCols] = {
+  {cmdOnOff,   nop,     nop,     nop,     nop},
+  {nop,        nop,     nop,     nop,     nop},
+  {nop,        nop,     nop,     nop,     nop},
+  {nop,        nop,     nop,     nop,     nop}
+};
 
 #endif
