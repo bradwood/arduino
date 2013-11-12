@@ -31,43 +31,39 @@ typedef struct
 } ir_transmission_t;
 
 
+//NOTE!! For all toggle-bit based protocols (e.g. RC5), ensure that the data field has the toggle bit alternating 
+//within a particular Cmd.
+
 //format {PROTOCOL,devname, data, nbits,len, buf[],hz,addr,repeat}
+
 ir_transmission_t cmdOnOff[3] = {   		  //Turns everything on / off -- not actually everything just TV, AVR & Tivo
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // telly on/off
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // AVR on/off TODO:
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }  // TIVO on/off TODO:
+	{ SONY,   TV,     0xA90,      12, 0, {}, 0, 0, 0 }, // telly on/off
+	{ NEC,    AVR,    0x4B36D32C, 32, 0, {}, 0, 0, 0 }, // AVR on/off 
+	{ RC5,    TIVO,   0x28C,      12, 0, {}, 0, 0, 0 }  // TIVO on/off Note, toggle bit is MSB ()
 };
 
 ir_transmission_t cmdTerrestrialTV[5] = {     //Turns on BBC1 -- assumes everything necessary is On.
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // set AVR to CBL/SAT
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // Type 1 on TIVO
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // Type 0 on TIVO
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // Type 1 on TIVO
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }  // Type ENTER  on TIVO
+	{ RC5,    TIVO,   0x281,      12, 0, {}, 0, 0, 0 }, // TIVO 1
+	{ RC5,    TIVO,   0x280,      12, 0, {}, 0, 0, 0 }, // TIVO 0
+	{ RC5,    TIVO,   0x281,      12, 0, {}, 0, 0, 0 }  // TIVO 1
 };
 
 ir_transmission_t cmdKidsTV[5] = {     //Turns on Cartoonito -- assumes everything necessary is On.
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // set AVR to CBL/SAT
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // Type 7 on TIVO
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // Type 0 on TIVO
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // Type 2 on TIVO
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }  // Type ENTER  on TIVO
+	{ RC5,    TIVO,   0x287,      12, 0, {}, 0, 0, 0 }, // TIVO 7
+	{ RC5,    TIVO,   0x280,      12, 0, {}, 0, 0, 0 }, // TIVO 0
+	{ RC5,    TIVO,   0x286,      12, 0, {}, 0, 0, 0 }  // TIVO 6
 };
 
 ir_transmission_t cmdMusicTV[5] = {     //Turns on MTV Channel -- assumes everything necessary is On.
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // set AVR to CBL/SAT
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // Type 7 on TIVO
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // Type 0 on TIVO
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // Type 2 on TIVO
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }  // Type ENTER  on TIVO
+	{ RC5,    TIVO,   0x283,      12, 0, {}, 0, 0, 0 }, // TIVO 3
+	{ RC5,    TIVO,   0x280,      12, 0, {}, 0, 0, 0 }, // TIVO 0
+	{ RC5,    TIVO,   0x281,      12, 0, {}, 0, 0, 0 }  // TIVO 1
 };
 
 ir_transmission_t cmdDocTV[5] = {     //Turns on Documentary Channel -- assumes everything necessary is On.
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // set AVR to CBL/SAT
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // Type 7 on TIVO
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // Type 0 on TIVO
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }, // Type 2 on TIVO
-	{ SONY, TV, 0xA90, 12, 0, {}, 0, 0, 0 }  // Type ENTER  on TIVO
+	{ RC5,    TIVO,   0x282,      12, 0, {}, 0, 0, 0 }, // TIVO 2
+	{ RC5,    TIVO,   0x281,      12, 0, {}, 0, 0, 0 }, // TIVO 1
+	{ RC5,    TIVO,   0x280,      12, 0, {}, 0, 0, 0 }  // TIVO 0
 };
 
 ir_transmission_t nop[1] = { //Do Nothing
@@ -92,12 +88,10 @@ ir_transmission_t *keyMap[numRows][numCols] =
 // vector type not supported in arduino :( 
 int keyMapSizes[numRows][numCols] = 
 {
-	{3,5,5,5,5},
+	{3,3,3,3,3},
 	{0,0,0,0,0},
 	{0,0,0,0,0},
 	{0,0,0,0,0}
 };
-
-
 
 #endif

@@ -11,6 +11,8 @@
 #include <Wire.h>  // Wire.h library is required to use SX1509 lib
 #include <sx1509_library.h>  // Include the SX1509 library
 
+const byte LEDPin = 13;
+
 const byte SX1509_ADDRESS = 0x3E;  // SX1509 I2C address (00)
 
 // SX1509 pin definitions
@@ -28,9 +30,14 @@ sx1509Class sx1509(SX1509_ADDRESS, sx1509resetPin, sx1509interruptPin);
 //instantiate IR transmission infrastructure
 IRsend irsend;
 
+//used for RC5 protocols which much toggle a bit on each new button pressed.
+boolean togglestate = false;
+
 void setup()
 {
 	Serial.begin(9600);
+
+	pinMode(LEDPin,OUTPUT);
 
 	// Must first initialize the sx1509:
 	sx1509.init();
@@ -78,6 +85,9 @@ void loop()
 	// The interrupt will be activated whenever a key press is read
 	if (!digitalRead(sx1509interruptPin))
 	{
+		digitalWrite(LEDPin,HIGH); //button pressed, so turn on LED
+
+
 		// readKeyData() returns a 16-bit word of data. The lower 8-bits 
 		//  represent each of the up-to 8 rows. The upper 8-bits
 		//  correspond to the columns. A 1 in a bit position means
@@ -99,7 +109,7 @@ void loop()
 			Serial.print(activeRow);
 			Serial.print(" ");
 			Serial.println(activeColumn);
-			executeCommand(activeRow,activeColumn);
+			executeCommand(activeRow,activeColumn); 
 
 		}
 		else
@@ -114,7 +124,7 @@ void loop()
 				Serial.print(activeRow);
 				Serial.print(" ");
 				Serial.println(activeColumn);
-				executeCommand(activeRow,activeColumn);
+				executeCommand(activeRow,activeColumn); 
 			}
 		}
 		// Reset release count since there's been a key-press
@@ -135,14 +145,8 @@ void loop()
 	}
 	delay(1);  // This gives releaseCountMax a more intuitive unit
 
-	/* original IR transmission loop -- remember SONY requires 3 sends...
-	if (Serial.read() != -1) {
-		for (int i = 0; i < 3; i++) {
-			irsend.sendSony(keyMap[0][0][0].data,keyMap[0][0][0].nbits );
-			delay(40);
-		}
-	}
-	*/
+	digitalWrite(LEDPin,LOW); // turn off LED
+
 }  // end loop
 
 // This function scours a byte and returns the position of the 
@@ -161,49 +165,85 @@ byte getBitPosition(byte dataByte)
 }
 
 
-
-void executeCommand(int row,int col) //executes the command array corresponding the the command at row and col in the keyMap
+//executes the command array corresponding the the command at row and col in the keyMap
+void executeCommand(int row,int col) 
 {
-	unsigned int arraySize = sizeof( *keyMap[row][col] ) / sizeof( keyMap[row][col][0] ); //get no of items in array of cmds
 	
-	Serial.print("No of items in array ");
-	Serial.println(arraySize);
-	
-	Serial.print("Size of cmd array");
-	Serial.println(sizeof( *keyMap[row][col] ));
-
-	Serial.print("Size of 1st item in cmd array");
-	Serial.println(sizeof( keyMap[row][col][0] ));
-
-	Serial.print("1st item in cmd array devname");
-	Serial.println(keyMap[row][col][2].dev_name );
-	Serial.print("2nd item in cmd array devname");
-	Serial.println(keyMap[row][col][3].dev_name );
-
-
-	switch (row)
+	for (int i = 0; i < keyMapSizes[row][col]; i++) //for each IR transmission in the the command
 	{
-	case 'a':    
-		//digitalWrite(2, HIGH);
-	break;
-	case 'b':    
-		//digitalWrite(3, HIGH);
-	break;
 
-	case 'c':    
-		//digitalWrite(4, HIGH);
-	break;
+		switch (keyMap[row][col][i].dev_type)
+		{
+		case NEC:
+			irsend.sendNEC(keyMap[row][col][i].data, keyMap[row][col][i].nbits);
+			delay(100);
+		break;
 
-	case 'd':    
-		//digitalWrite(5, HIGH);
-	break;
+		case SONY:
+			for (int j = 0; j < 3; j++) //Sony needs 2 or 3 blasts.
+			{
+				irsend.sendSony(keyMap[row][col][i].data, keyMap[row][col][i].nbits);
+				delay(40);
+			}
+		break;
 
-	case 'e':    
-		//digitalWrite(6, HIGH);
-	break;
-    
-	//default:
-	// turn all the LEDs off:
-	} //end switch  
+		case RC5:
+			togglestate = !togglestate; //flip whatever the last toggled state was.
+
+			if (togglestate){  //if the resulting state is 1 then flip the 0 data toggle bit to 1
+							   //requires that all RC5 data fields have the MSB=0
+				unsigned long data = keyMap[row][col][i].data;
+				data ^= 1 << 11;  //toggle the 12th bit ON-- LSB is bit 0
+				
+				for (int j = 0; j < 3; j++)  //RC5 needs 2 or 3 blasts.
+				{
+				 	irsend.sendRC5(data, keyMap[row][col][i].nbits); //and send
+				 	delay(40);
+				} 
+			} 
+			else
+			{
+				for (int j = 0; j < 3; j++) //RC5 needs 2 or 3 blasts.
+				{
+					irsend.sendRC5(keyMap[row][col][i].data, keyMap[row][col][i].nbits); //otherwise, send with togglebit = 0
+					delay(40);
+				}
+			}
+		break;
+
+		case RC6:
+			//not implemented
+		break;
+
+		case DISH:
+			//not implemented
+		break;
+
+		case SHARP:
+			//not implemented
+		break;
+
+		case JVC:
+			//not implemented
+		break;
+	    
+		case SANYO:
+			//not implemented
+		break;
+
+		case MITSUBISHI:
+			//not implemented
+		break;
+
+		case UNKNOWN:
+			//digitalWrite(5, HIGH);
+		break;
+
+		//default:
+		//not implemented
+		} //end switch  
+	
+	delay(350);
+	}
 
 }
