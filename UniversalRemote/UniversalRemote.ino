@@ -168,9 +168,24 @@ byte getBitPosition(byte dataByte)
 //executes the command array corresponding the the command at row and col in the keyMap
 void executeCommand(int row,int col) 
 {
-	
+		
 	for (int i = 0; i < keyMapSizes[row][col]; i++) //for each IR transmission in the the command
 	{
+
+		Serial.print("Command");
+		Serial.print(i);
+		Serial.print(" of ");
+		Serial.println(keyMapSizes[row][col]);
+
+		Serial.print("devtype =");
+		Serial.println(keyMap[row][col][i].dev_type);
+
+		Serial.print("data =");
+		Serial.println(keyMap[row][col][i].data,HEX);
+
+		Serial.print("nbits =");
+		Serial.println(keyMap[row][col][i].nbits);	
+		Serial.println(); //newline
 
 		switch (keyMap[row][col][i].dev_type)
 		{

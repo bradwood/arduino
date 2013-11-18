@@ -17,6 +17,20 @@
 #define APPLETV 4
 #define TIVO 5
 
+/* FYI
+#define NEC 1
+#define SONY 2
+#define RC5 3
+#define RC6 4
+#define DISH 5
+#define SHARP 6
+#define PANASONIC 7
+#define JVC 8
+#define SANYO 9
+#define MITSUBISHI 10
+#define UNKNOWN -1
+*/
+
 typedef struct
 {
 	int dev_type;                       /* see IRremote.h for types NEC, SONY, SHARP, etc */
