@@ -260,6 +260,7 @@ void setup ()
 void loop()
 {
 	//fix for intermitting crashes of the RF infrastructure.
+	Mirf.powerDown();
 	Mirf.init();
 
 	buf[6] = 0;
