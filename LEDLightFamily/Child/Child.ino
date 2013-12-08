@@ -259,6 +259,9 @@ void setup ()
 
 void loop()
 {
+	//fix for intermitting crashes of the RF infrastructure.
+	Mirf.init();
+
 	buf[6] = 0;
 	if(ModeButtonPressed(LastButtonState,CurrentButtonState,MODE_SWITCH_PIN,Debounce_Delay))
 	{
